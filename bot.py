@@ -5,7 +5,7 @@
 import configparser
 
 ## Telegram rest-API libraries
-
+import telebot
 
 ## Operation system libraries
 import platform
@@ -40,32 +40,21 @@ class workstation:
         output=subprocess.run([command],shell=True, capture_output=True,encoding="utf-8")
         return output.stdout
 
-# Bot class
-class bot:
 
-    ## Bot atributes
-    pc=''
-    token=''
-
-    ## Constructor 
-    def __init__(self,token):
-        self.pc = workstation()
-        self.token = token
-    ## Destructor
-    def __del__(self):
-        del self.pc
-        print("Release Bot resources")
+pc = workstation()
+config_obj = configparser.ConfigParser()
+config_obj.read("/etc/fedora_bot/bot.ini")
+bot_config = config_obj["bot"]
+bot = telebot.TeleBot(bot_config["token"])
+#out = pc.run_command("systemctl status squid")
+#print(out)
+#del pc
 
 
-def main():
-    config_obj = configparser.ConfigParser()
-    config_obj.read("/etc/fedora_bot/bot.ini")
-    bot_config = config_obj["bot"]
-    osbot = bot(bot_config["token"])
-    #out = pc.run_command("systemctl status squid")
-    #print(out)
-    #del pc
 
-if __name__ == "__main__":
-    main()
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+	bot.reply_to(message, "Hello, welcome to bot. The workstation information is " + pc.get_information() )
 
+
+bot.polling()
