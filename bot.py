@@ -1,9 +1,8 @@
-# Libraries
+#!/opt/fedora_bot/bot_fedora_dependencies/bin/python
 
+# Libraries
 ## Config parser
 import configparser
-from distutils.command.config import config
-from lib2to3.pgen2 import token
 
 ## Telegram rest-API libraries
 
@@ -16,42 +15,43 @@ import subprocess
 ## Regex library
 import re
 
+# Workstation class
 class workstation:
 
-    # Workstation atributes
+    ## Workstation atributes
     _information = platform.uname()
 
-    # Constructor
+    ## Constructor
     def __init__(self):
         self._information = str(self._information)
-        self._information = re.sub(r"uname_result\((.*)\)",r"\1",self._information)
+        self._information = re.sub(r"uname_result\((.*)\)",r"\1",self._information)  # Delete the uname_result() with a regex
         
-    
-    # Destructor
+    ## Destructor
     def __del__(self):
         print("Release PC resources")
     
-    # Workstation methods
+    ## Workstation methods
+    ### Get information about the pc
     def get_information(self):
         return self._information
-    
+        
+    ### Run command into linux
     def run_command(self,command):
         output=subprocess.run([command],shell=True, capture_output=True,encoding="utf-8")
         return output.stdout
 
+# Bot class
 class bot:
 
-    # Bot atributes
+    ## Bot atributes
     pc=''
     token=''
 
-    # Constructor 
+    ## Constructor 
     def __init__(self,token):
         self.pc = workstation()
         self.token = token
-        print(self.token)
-    
-    # Destructor
+    ## Destructor
     def __del__(self):
         del self.pc
         print("Release Bot resources")
@@ -62,7 +62,6 @@ def main():
     config_obj.read("/etc/fedora_bot/bot.ini")
     bot_config = config_obj["bot"]
     osbot = bot(bot_config["token"])
-    #pc = workstation()
     #out = pc.run_command("systemctl status squid")
     #print(out)
     #del pc
