@@ -1,5 +1,10 @@
 # Libraries
 
+## Config parser
+import configparser
+from distutils.command.config import config
+from lib2to3.pgen2 import token
+
 ## Telegram rest-API libraries
 
 
@@ -33,26 +38,34 @@ class workstation:
     def run_command(self,command):
         output=subprocess.run([command],shell=True, capture_output=True,encoding="utf-8")
         return output.stdout
-#
-#class bot:
-#
-#    # Bot atributes
-#    pc=''
-#
-#    # Constructor 
-#    def __init__(self):
-#        self.pc = workstation()
-#    
-#    # Destructor
-#    def __del__(self):
-#        del self.pc
-#        print("Release Bot resources")
-#
+
+class bot:
+
+    # Bot atributes
+    pc=''
+    token=''
+
+    # Constructor 
+    def __init__(self,token):
+        self.pc = workstation()
+        self.token = token
+        print(self.token)
+    
+    # Destructor
+    def __del__(self):
+        del self.pc
+        print("Release Bot resources")
+
+
 def main():
-    pc = workstation()
-    out = pc.run_command("systemctl status squid")
-    print(out)
-    del pc
+    config_obj = configparser.ConfigParser()
+    config_obj.read("/etc/fedora_bot/bot.ini")
+    bot_config = config_obj["bot"]
+    osbot = bot(bot_config["token"])
+    #pc = workstation()
+    #out = pc.run_command("systemctl status squid")
+    #print(out)
+    #del pc
 
 if __name__ == "__main__":
     main()
