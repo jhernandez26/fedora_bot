@@ -104,10 +104,26 @@ def send_cpuinfo(message):
     output = pc.run_command("lscpu")
     bot.reply_to(message,output)
 
+@bot.message_handler(commands=['topmem'])
+def send_cpuinfo(message):
+    output = pc.run_command("top -b -n1   -o %MEM | head  -20")
+    bot.reply_to(message,output)
+
+@bot.message_handler(commands=['topcpu'])
+def send_cpuinfo(message):
+    output = pc.run_command("top -b -n1   -o %CPU | head  -20")
+    bot.reply_to(message,output)
+
 @bot.message_handler(commands=['diskspace'])
 def send_diskspace(message):
     output = pc.run_command("df -h")
     bot.reply_to(message,output)
+
+@bot.message_handler(commands=['reboot'])
+def send_diskspace(message):
+    output = pc.run_command("sudo reboot")
+    bot.reply_to(message,output)
+
 
 @bot.message_handler(commands=['isrunning'])
 @bot.message_handler(regexp=r"isrunning\s'.*'")
