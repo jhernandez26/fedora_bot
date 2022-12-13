@@ -66,7 +66,7 @@ class workstation_linux:
             out = output.stdout
         return out
 
-
+print("Starting bot")
 pc = workstation_linux()
 config_obj = configparser.ConfigParser()
 config_obj.read("/etc/fedora_bot/bot.ini")
@@ -143,4 +143,11 @@ def run_command(message):
 def repeat(message):
     bot.send_message(message.chat.id, message.text)
 
-bot.polling()
+while True:
+    try:
+        bot.polling()
+    except:
+        print (0)
+    finally:
+        pass
+    
