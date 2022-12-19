@@ -1,0 +1,10 @@
+/var/log/fedora_bot/*.log {
+    daily
+    compress
+    delaycompress
+    dateext
+    maxage 30
+    rotate 30
+    missingok
+    copytruncate
+}
