@@ -32,5 +32,13 @@ Download the rpm file from this repositorie, as root user run install the RPM
 
 >**Note**
 >The RPM only works for Fedora 37, the expect is in this repositorie for create a new rpm if you needed.
+
+### Manually
+
+Clone the repositorie 
+
+    # git clone https://github.com/jhernandez26/fedora_bot.git
+
+
 ## Configuration
 ## Security best practice
