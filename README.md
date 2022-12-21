@@ -62,4 +62,9 @@ change the owner for the directories **/etc/fedora_bot** and **/opt/fedora_bot**
 
 Configure the **chat id** and **BotFather token** in **/etc/fedora_bot/bot.ini**
 ## Configuration
+
+### Bot configuration ###
+### Log configuration ###
+### Kerberos ###
+
 ## Security best practice
