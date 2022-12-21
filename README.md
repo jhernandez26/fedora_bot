@@ -78,6 +78,13 @@ change the owner for the directories **/etc/fedora_bot** and **/opt/fedora_bot**
     # chown <bot_user>:<bot_user> -R /etc/fedora_bot /opt/fedora_bot
 
 Configure the **chat id** and **BotFather token** in **/etc/fedora_bot/bot.ini**
+
+### Start bot
+After configure the **bot.ini** you can start the bot with the command systemctl
+
+    # systemctl start bot-telegram.service
+    # systemctl enable bot-telegram.service
+
 ## Configuration
 The sections **bot** and **log** are  mandatory.
 
