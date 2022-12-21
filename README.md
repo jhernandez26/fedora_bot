@@ -26,7 +26,10 @@ From [Telegram Web](https://web.telegram.org/z/), go to the chat and the URL get
 
 ## Installation
 ### RPM
+Download the rpm file from this repositorie, as root user run install the RPM
+    # dnf install bot_telegram-1.1.1-1.fc37.x86_64.rpm
+
 >**Note**
->The RPM only work for Fedora 37, the expect is this repositorie for create a new rpm.
+>The RPM only works for Fedora 37, the expect is in this repositorie for create a new rpm.
 ## Configuration
 ## Security best practice
