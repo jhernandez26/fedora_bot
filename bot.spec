@@ -38,9 +38,11 @@ rm -rf $RPM_BUILD_ROOT
 install -d -m 0755 %{buildroot}/etc/fedora_bot                                                                                                                                                install -d -m 0755 %{buildroot}/opt/fedora_bot
 install -d -m 0755 %{buildroot}/var/log/fedora_bot  
 install -d -m 0755 %{buildroot}/usr/lib/systemd/system/  
+install -d -m 0755 %{buildroot}/etc/logrotate.d  
 install -m 755 bot.py %{buildroot}/opt/fedora_bot/bot.py
 install -m 755 bot.ini %{buildroot}/etc/fedora_bot/bot.ini
 install -m 755 bot-telegram.service %{buildroot}/usr/lib/systemd/system/bot-telegram.service 
+install -m 755 bot %{buildroot}/etc/logrotate.d/bot 
 #cp -pR  bot-telegram.service %{buildroot}/usr/lib/systemd/system/bot-telegram.service 
 cp -pR  bot_fedora_dependencies   %{buildroot}/opt/fedora_bot/
 #chown usr_srvc_bot:usr_srvc_bot -R %{buildroot}/*                                                                                    
@@ -49,8 +51,10 @@ cp -pR  bot_fedora_dependencies   %{buildroot}/opt/fedora_bot/
 
 %files                                                                                                                 
 /etc/fedora_bot                                                                                                        
-/opt/fedora_bot                                                                                                    
+/opt/fedora_bot     
+/etc/logrotate.d                                                                                               
 /var/log/fedora_bot                                                                                                        
+/etc/logrotate.d/bot
 /opt/fedora_bot/bot.py                                                                                              
 /etc/fedora_bot/bot.ini                                                                                                   
 /usr/lib/systemd/system/bot-telegram.service                                                                                                 

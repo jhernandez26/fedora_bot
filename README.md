@@ -50,6 +50,12 @@ As root move the directory **fedora_bot** to **/opt**
 Create the directories **/etc/fedora_bot** and **/var/log/fedora_bot**
 
     # mkdir -p /etc/fedora_bot /var/log/fedora_bot
+mv **bot.ini** to **/etc/fedora_bot**, **bot** to **/etc/logrotate.d** and **bot-telegram.service** to  **/usr/lib/systemd/system**
+
+    # mv bot.ini /etc/fedora_bot
+    # mv bot /etc/logrotate.d
+    # mv bot-telegram.service /usr/lib/systemd/system
+
 
 ## Configuration
 ## Security best practice
