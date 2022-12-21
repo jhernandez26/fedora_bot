@@ -22,7 +22,24 @@ From [Telegram Web](https://web.telegram.org/z/), go to the chat and the URL get
 
 ![Chat ID](https://github.com/jhernandez26/fedora_bot/blob/developer/documentacion/img/chat_id.png)
 
+## Command
+The bot has this commands:
 
+start  - Start bot
+pcinformation - Get information about the workstation
+uptime - Get workstation uptime
+date - Get workstation  date
+freemem - Get memory information
+cpuinfo - Get CPU information
+diskspace - Get disk usasege
+reboot - Reboot workstation
+isrunning - Check if a deamon is running, example /isrunning 'sshd'
+run - Run a command, the command should '', example /run 'ls'
+topmem -  Top order by Mem
+topcpu - Top order by CPU
+reboot_bot - Reboot the bot client
+check_kerberos_ticket -  Check kerberos ticket
+create_kerberos_ticket - Create a new kerberos ticket
 
 ## Installation
 ### RPM
@@ -62,9 +79,18 @@ change the owner for the directories **/etc/fedora_bot** and **/opt/fedora_bot**
 
 Configure the **chat id** and **BotFather token** in **/etc/fedora_bot/bot.ini**
 ## Configuration
+The sections **bot** and **log** are  mandatory.
 
 ### Bot configuration ###
+In this secction you have to put the API token (**token**)  and the (**chat id**)
+
 ### Log configuration ###
+The bit has 2 logs, the **audit** save the commands that run the bot, **log** is the error log for the bot, **loggin** is the log level.
+
 ### Kerberos ###
+This options is optional, if the workstation is using kerberos or Free Ipa, you can create a kerberos ticket with the command **create_kerberos_ticket**.
+
+The command is using a keytab set in the option **keytab**
 
 ## Security best practice
+The bot can run any command, as best practice the bot **does not run with root**, however the recomendation is set a sudo rules for set what commands you can run as root or another user.
