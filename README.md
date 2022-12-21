@@ -43,6 +43,13 @@ Create a user for run the python script
 >**Note**
 >The RPM create the user usr_srvc_bot
 
+As root move the directory **fedora_bot** to **/opt** 
+
+    # mv fedora_bot /opt
+
+Create the directories **/etc/fedora_bot** and **/var/log/fedora_bot**
+
+    # mkdir -p /etc/fedora_bot /var/log/fedora_bot
 
 ## Configuration
 ## Security best practice
