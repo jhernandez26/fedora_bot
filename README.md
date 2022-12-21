@@ -5,7 +5,8 @@ Telegram bot is an python application for run commands into a Linux pc.
 ![OpenRepo Demo Video](https://github.com/jhernandez26/fedora_bot/blob/developer/documentacion/img/demo.gif?raw=true)
 
 ## Getting Started
-The application is working with a token from ** BothFather ** and the ** ChatID **
+The application is working with a token from ** BothFather ** and the ** ChatID **. About the dependencies the python is working with a virtual enviroment.
+
 ### Create a token with bothfather
 Search the BotFather    
 
@@ -24,7 +25,8 @@ From [Telegram Web](https://web.telegram.org/z/), go to the chat and the URL get
 
 
 ## Installation
+### RPM
 >**Note**
->asas
+>The RPM only work for Fedora 37, the expect is this repositorie for create a new rpm.
 ## Configuration
 ## Security best practice
