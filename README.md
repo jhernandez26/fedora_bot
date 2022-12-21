@@ -56,6 +56,6 @@ mv **bot.ini** to **/etc/fedora_bot**, **bot** to **/etc/logrotate.d** and **bot
     # mv bot /etc/logrotate.d
     # mv bot-telegram.service /usr/lib/systemd/system
 
-
+change the owner for the directories **/etc/fedora_bot** and **/opt/fedora_bot**
 ## Configuration
 ## Security best practice
