@@ -17,7 +17,7 @@ Run the command **/newbot** and copy the API token
 ![BotFather search](https://github.com/jhernandez26/fedora_bot/blob/developer/documentacion/img/telegram_3.png)
 
 ### Get chat id
-From [Telegram Web](https://web.telegram.org/z/), go to the chat and the URL get the ID
+From [Telegram Web](https://web.telegram.org/z/), go to the chat and the URL get the ID (the numbers after the # )
 
 ![Chat ID](https://github.com/jhernandez26/fedora_bot/blob/developer/documentacion/img/chat_id.png)
 
