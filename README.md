@@ -7,7 +7,7 @@ Telegram bot is an python application for run commands into a Linux pc.
 ## Getting Started
 
 ### Create a token with bothfather
-Search the BotFather ![BotFather search](https://github.com/jhernandez26/fedora_bot/blob/developer/documentacion/img/telegram_1.png)
+Search the BotFather 
 ## Installation
 >**Note**
 >asas
