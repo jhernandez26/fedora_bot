@@ -31,6 +31,6 @@ Download the rpm file from this repositorie, as root user run install the RPM
     # dnf install bot_telegram-1.1.1-1.fc37.x86_64.rpm
 
 >**Note**
->The RPM only works for Fedora 37, the expect is in this repositorie for create a new rpm.
+>The RPM only works for Fedora 37, the expect is in this repositorie for create a new rpm if you needed.
 ## Configuration
 ## Security best practice
