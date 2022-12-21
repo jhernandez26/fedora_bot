@@ -57,5 +57,9 @@ mv **bot.ini** to **/etc/fedora_bot**, **bot** to **/etc/logrotate.d** and **bot
     # mv bot-telegram.service /usr/lib/systemd/system
 
 change the owner for the directories **/etc/fedora_bot** and **/opt/fedora_bot**
+
+    # chown <bot_user>:<bot_user> -R /etc/fedora_bot /opt/fedora_bot
+
+Configure the **chat id** and **BotFather token** in **/etc/fedora_bot/bot.ini**
 ## Configuration
 ## Security best practice
