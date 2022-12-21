@@ -37,7 +37,11 @@ Download the rpm file from this repositorie, as root user run install the RPM
 
 Clone the repositorie 
 
-    # git clone https://github.com/jhernandez26/fedora_bot.git
+    $ git clone https://github.com/jhernandez26/fedora_bot.git
+
+Create a user for run the python script
+>**Note**
+>The RPM create the user usr_srvc_bot
 
 
 ## Configuration
