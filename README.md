@@ -85,7 +85,7 @@ The sections **bot** and **log** are  mandatory.
 In this secction you have to put the API token (**token**)  and the (**chat id**)
 
 ### Log configuration ###
-The bit has 2 logs, the **audit** save the commands that run the bot, **log** is the error log for the bot, **loggin** is the log level.
+The bit has two logs, the **audit** save the commands that run the bot, **log** is the error log for the bot, **loggin** is the log level.
 
 ### Kerberos ###
 This options is optional, if the workstation is using kerberos or Free Ipa, you can create a kerberos ticket with the command **create_kerberos_ticket**.
