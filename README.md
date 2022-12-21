@@ -11,6 +11,10 @@ Search the BotFather
 
 
 ![BotFather search](https://github.com/jhernandez26/fedora_bot/blob/developer/documentacion/img/telegram_1.png)
+
+Run the command **/newbot** and copy the API token
+
+![BotFather search](https://github.com/jhernandez26/fedora_bot/blob/developer/documentacion/img/telegram_3.png)
 ## Installation
 >**Note**
 >asas
